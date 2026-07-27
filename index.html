@@ -1,0 +1,2162 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>موسسه حقوقی پارس | وکیل پایه یک دادگستری</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://cdn.jsdelivr.net/fontsource/fonts/vazirmatn@latest/index.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/fontsource/fonts/playfair-display@latest/index.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- فراخوانی فایل CSS جدا شده -->
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: {
+                50: "#fdf9ec",
+                100: "#f9efd0",
+                200: "#f2dc99",
+                300: "#eac45f",
+                400: "#e4b23a",
+                500: "#d89924",
+                600: "#be771b",
+                700: "#9c5819",
+                800: "#81461b",
+                900: "#6d3b1c",
+              },
+              ink: {
+                900: "#0b0d12",
+                800: "#11141b",
+                700: "#171b24",
+                600: "#1f242f",
+              },
+            },
+            fontFamily: {
+              sans: ["Vazirmatn", "sans-serif"],
+              display: ['"Playfair Display"', "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="noise">
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="text-center">
+        <div class="loader-logo mx-auto mb-5"></div>
+        <div class="text-gold-grad font-display text-2xl tracking-widest">
+          PĀRS LAW
+        </div>
+      </div>
+    </div>
+    <!-- Custom cursor -->
+    <div class="custom-cursor" id="cursor"></div>
+    <!-- Scroll progress -->
+    <div id="scroll-progress"></div>
+
+    <!-- NAV -->
+    <nav
+      id="navbar"
+      class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-white/5 transition-all"
+    >
+      <div
+        class="max-w-7xl mx-auto px-5 lg:px-10 flex items-center justify-between h-20"
+      >
+        <a href="#home" class="flex items-center gap-3">
+          <div
+            class="w-11 h-11 rounded-lg flex items-center justify-center"
+            style="background: linear-gradient(135deg, #d89924, #9c5819)"
+          >
+            <svg
+              class="w-6 h-6 text-ink-900"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+            >
+              <path d="M3 21h18M6 21V9l6-5 6 5v12M10 21v-6h4v6" />
+            </svg>
+          </div>
+          <div>
+            <div class="font-display text-xl text-gold-grad leading-none">
+              PĀRS
+            </div>
+            <div class="text-[11px] text-white/50 tracking-[0.3em]">
+              LAW FIRM
+            </div>
+          </div>
+        </a>
+        <ul class="hidden lg:flex items-center gap-8 text-sm text-white/80">
+          <li>
+            <a href="#home" class="fancy-link hover:text-gold-300">خانه</a>
+          </li>
+          <li>
+            <a href="#services" class="fancy-link hover:text-gold-300"
+              >خدمات حقوقی</a
+            >
+          </li>
+          <li>
+            <a href="#about" class="fancy-link hover:text-gold-300"
+              >درباره ما</a
+            >
+          </li>
+          <li>
+            <a href="#cases" class="fancy-link hover:text-gold-300"
+              >پرونده‌ها</a
+            >
+          </li>
+          <li>
+            <a href="#team" class="fancy-link hover:text-gold-300">تیم وکلا</a>
+          </li>
+          <li>
+            <a href="#blog" class="fancy-link hover:text-gold-300">مقالات</a>
+          </li>
+          <li>
+            <a href="#contact" class="fancy-link hover:text-gold-300">تماس</a>
+          </li>
+        </ul>
+        <div class="hidden md:flex items-center gap-3">
+          <a
+            href="tel:+982112345678"
+            class="flex items-center gap-2 text-sm text-white/80 hover:text-gold-300"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              />
+            </svg>
+            ۰۲۱-۱۲۳۴۵۶۷۸
+          </a>
+          <button
+            onclick="openModal()"
+            class="btn-gold text-ink-900 font-semibold text-sm px-5 py-2.5 rounded-lg"
+          >
+            رزرو مشاوره
+          </button>
+        </div>
+        <button
+          id="burger"
+          class="lg:hidden w-10 h-10 flex items-center justify-center"
+        >
+          <div class="space-y-1.5">
+            <span class="block w-6 h-0.5 bg-gold-300 transition"></span>
+            <span class="block w-6 h-0.5 bg-gold-300 transition"></span>
+            <span class="block w-4 h-0.5 bg-gold-300 transition"></span>
+          </div>
+        </button>
+      </div>
+      <!-- Mobile menu -->
+      <div
+        id="mobileMenu"
+        class="lg:hidden hidden border-t border-white/5 bg-ink-900"
+      >
+        <ul class="px-6 py-6 space-y-4 text-white/80">
+          <li><a href="#home" class="block">خانه</a></li>
+          <li><a href="#services" class="block">خدمات حقوقی</a></li>
+          <li><a href="#about" class="block">درباره ما</a></li>
+          <li><a href="#cases" class="block">پرونده‌ها</a></li>
+          <li><a href="#team" class="block">تیم وکلا</a></li>
+          <li><a href="#blog" class="block">مقالات</a></li>
+          <li><a href="#contact" class="block">تماس</a></li>
+          <li>
+            <button
+              onclick="openModal()"
+              class="btn-gold text-ink-900 font-semibold w-full py-3 rounded-lg"
+            >
+              رزرو مشاوره
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero-bg relative pt-32 pb-24 overflow-hidden">
+      <div class="absolute inset-0 grid-lines opacity-40"></div>
+      <div
+        class="absolute top-28 left-10 w-72 h-72 rounded-full bg-gold-500/10 blur-3xl floating"
+      ></div>
+      <div
+        class="absolute bottom-10 right-20 w-80 h-80 rounded-full bg-gold-700/10 blur-3xl floating"
+        style="animation-delay: -3s"
+      ></div>
+      <div
+        class="relative max-w-7xl mx-auto px-5 lg:px-10 grid lg:grid-cols-12 gap-10 items-center"
+      >
+        <div class="lg:col-span-7" data-aos="fade-left">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold-500/30 bg-gold-500/5 mb-6"
+          >
+            <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
+            <span class="text-xs text-gold-300 tracking-widest"
+              >موسسه حقوقی برتر تهران — از ۱۳۸۰</span
+            >
+          </div>
+          <h1
+            class="font-display text-5xl md:text-6xl lg:text-7xl leading-tight mb-6"
+          >
+            <span class="text-white">عدالت را</span><br />
+            <span id="typed" class="text-gold-grad"></span
+            ><span class="cursor-blink">&nbsp;</span>
+          </h1>
+          <p
+            class="text-white/70 text-lg md:text-xl leading-relaxed max-w-2xl mb-10"
+          >
+            بیش از دو دهه تجربه در دفاع از حقوق شما. تیمی از وکلای پایه یک
+            دادگستری با تخصص در دعاوی پیچیده تجاری، کیفری، خانواده و ملکی — با
+            تعهد به نتیجه و رازداری مطلق.
+          </p>
+          <div class="flex flex-wrap gap-4 mb-12">
+            <button
+              onclick="openModal()"
+              class="btn-gold text-ink-900 font-bold px-8 py-4 rounded-xl flex items-center gap-2"
+            >
+              دریافت مشاوره رایگان
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <a
+              href="#cases"
+              class="px-8 py-4 rounded-xl border border-white/15 hover:border-gold-500 hover:text-gold-300 transition flex items-center gap-2"
+              >مشاهده پرونده‌های موفق</a
+            >
+          </div>
+          <div class="grid grid-cols-3 gap-4 max-w-xl">
+            <div class="border-r border-white/10 pr-4">
+              <div
+                class="num-big text-3xl md:text-4xl text-gold-grad counter"
+                data-target="2400"
+              >
+                0
+              </div>
+              <div class="text-xs text-white/50 mt-1">پرونده موفق</div>
+            </div>
+            <div class="border-r border-white/10 pr-4">
+              <div
+                class="num-big text-3xl md:text-4xl text-gold-grad counter"
+                data-target="98"
+              >
+                0
+              </div>
+              <div class="text-xs text-white/50 mt-1">درصد رضایت</div>
+            </div>
+            <div>
+              <div
+                class="num-big text-3xl md:text-4xl text-gold-grad counter"
+                data-target="23"
+              >
+                0
+              </div>
+              <div class="text-xs text-white/50 mt-1">سال تجربه</div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="lg:col-span-5 relative"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
+          <div class="relative">
+            <div
+              class="absolute -inset-6 bg-gradient-to-br from-gold-500/30 to-gold-800/10 blur-2xl rounded-3xl"
+            ></div>
+            <div
+              class="relative rounded-3xl overflow-hidden border border-gold-500/20 shadow-2xl"
+            >
+              <img
+                src="https://image.qwenlm.ai/public_source/ae1c9f77-097e-4ede-a461-ac66b51fdf21/131909b6f-c2bf-494d-ac80-b129a8900a81.png"
+                alt="وکیل"
+                class="w-full h-[560px] object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/30 to-transparent"
+              ></div>
+              <div class="absolute bottom-6 inset-x-6 glow-border p-5">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-12 h-12 rounded-full bg-gold-500/20 flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-6 h-6 text-gold-300"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 15l-2 5l9-9l-9-9l2 5H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-white font-bold">دکتر امیر پارسا</div>
+                    <div class="text-xs text-white/60">
+                      وکیل پایه یک دادگستری | استاد دانشگاه
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute -top-6 -right-6 bg-ink-800 border border-gold-500/30 rounded-2xl p-4 floating"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-10 h-10 rounded-full bg-gold-500 flex items-center justify-center"
+                >
+                  <svg
+                    class="w-5 h-5 text-ink-900"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-white font-bold text-sm">۴.۹ از ۵</div>
+                  <div class="text-[10px] text-white/50">
+                    رتبه برتر کانون وکلا
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="py-8 border-y border-white/5 bg-ink-800/50 overflow-hidden">
+      <div class="marquee text-white/40 text-sm">
+        <span>✦ حقوق تجارت بین‌الملل</span><span>✦ دعاوی ملکی</span
+        ><span>✦ حقوق کیفری</span><span>✦ حقوق خانواده</span
+        ><span>✦ مالکیت فکری</span><span>✦ حقوق شرکت‌ها</span
+        ><span>✦ داوری تجاری</span><span>✦ حقوق کار</span
+        ><span>✦ حقوق تجارت بین‌الملل</span><span>✦ دعاوی ملکی</span
+        ><span>✦ حقوق کیفری</span><span>✦ حقوق خانواده</span>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-28 relative">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <div class="text-gold-300 text-xs tracking-[0.3em] mb-4">
+            خدمات حقوقی تخصصی
+          </div>
+          <h2 class="font-display text-4xl md:text-5xl text-white mb-4">
+            راه‌حل‌های حقوقی <span class="text-gold-grad">هوشمندانه</span>
+          </h2>
+          <span class="section-divider"></span>
+          <p class="text-white/60 max-w-2xl mx-auto mt-6">
+            تیم حقوقی ما در ۸ حوزه کلیدی، مشاوره و وکالت تخصصی ارائه می‌دهد.
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="service-card glow-border p-7" data-aos="fade-up">
+            <div
+              class="icon-wrap w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center mb-5"
+            >
+              <svg
+                class="w-7 h-7 text-gold-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M9 13h1M9 17h1M14 9h1M14 13h1M14 17h1"
+                />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl text-white mb-2">حقوق تجارت</h3>
+            <p class="text-white/60 text-sm leading-relaxed mb-4">
+              قراردادهای تجاری، شرکت‌ها، ورشکستگی و ادغام.
+            </p>
+            <a
+              href="#"
+              class="text-gold-300 text-sm flex items-center gap-1 hover:gap-2 transition-all"
+              >بیشتر
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 12H5M12 19l-7-7 7-7" /></svg
+            ></a>
+          </div>
+          <div
+            class="service-card glow-border p-7"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="icon-wrap w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center mb-5"
+            >
+              <svg
+                class="w-7 h-7 text-gold-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4.5L6 21l1.5-7.5L2 9h7z"
+                />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl text-white mb-2">دعاوی ملکی</h3>
+            <p class="text-white/60 text-sm leading-relaxed mb-4">
+              اختلافات ملکی، سند، تصرف و تقسیم املاک.
+            </p>
+            <a
+              href="#"
+              class="text-gold-300 text-sm flex items-center gap-1 hover:gap-2 transition-all"
+              >بیشتر
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 12H5M12 19l-7-7 7-7" /></svg
+            ></a>
+          </div>
+          <div
+            class="service-card glow-border p-7"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="icon-wrap w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center mb-5"
+            >
+              <svg
+                class="w-7 h-7 text-gold-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl text-white mb-2">حقوق کیفری</h3>
+            <p class="text-white/60 text-sm leading-relaxed mb-4">
+              دفاع در پرونده‌های کیفری پیچیده و جنایی.
+            </p>
+            <a
+              href="#"
+              class="text-gold-300 text-sm flex items-center gap-1 hover:gap-2 transition-all"
+              >بیشتر
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 12H5M12 19l-7-7 7-7" /></svg
+            ></a>
+          </div>
+          <div
+            class="service-card glow-border p-7"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="icon-wrap w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center mb-5"
+            >
+              <svg
+                class="w-7 h-7 text-gold-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl text-white mb-2">حقوق خانواده</h3>
+            <p class="text-white/60 text-sm leading-relaxed mb-4">
+              طلاق، حضانت، مهریه و نفقه با حفظ حریم.
+            </p>
+            <a
+              href="#"
+              class="text-gold-300 text-sm flex items-center gap-1 hover:gap-2 transition-all"
+              >بیشتر
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 12H5M12 19l-7-7 7-7" /></svg
+            ></a>
+          </div>
+          <div class="service-card glow-border p-7" data-aos="fade-up">
+            <div
+              class="icon-wrap w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center mb-5"
+            >
+              <svg
+                class="w-7 h-7 text-gold-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path
+                  d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl text-white mb-2">
+              تجارت بین‌الملل
+            </h3>
+            <p class="text-white/60 text-sm leading-relaxed mb-4">
+              قراردادهای بین‌المللی و داوری تجاری.
+            </p>
+            <a
+              href="#"
+              class="text-gold-300 text-sm flex items-center gap-1 hover:gap-2 transition-all"
+              >بیشتر
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 12H5M12 19l-7-7 7-7" /></svg
+            ></a>
+          </div>
+          <div
+            class="service-card glow-border p-7"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="icon-wrap w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center mb-5"
+            >
+              <svg
+                class="w-7 h-7 text-gold-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl text-white mb-2">حقوق بانکی</h3>
+            <p class="text-white/60 text-sm leading-relaxed mb-4">
+              وام، تسهیلات، ضمانت‌نامه و دعاوی بانکی.
+            </p>
+            <a
+              href="#"
+              class="text-gold-300 text-sm flex items-center gap-1 hover:gap-2 transition-all"
+              >بیشتر
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 12H5M12 19l-7-7 7-7" /></svg
+            ></a>
+          </div>
+          <div
+            class="service-card glow-border p-7"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="icon-wrap w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center mb-5"
+            >
+              <svg
+                class="w-7 h-7 text-gold-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 0 0 .504 5.32l-1.7 2.9a1 1 0 0 0 .87 1.5l3.3-.15.7 3.22a1 1 0 0 0 1.85.23l1.7-2.9a3.42 3.42 0 1 0 1.3-1.3l-1.7 2.9a1 1 0 0 0-1.85-.23l-.7-3.22-3.3.15a1 1 0 0 0-.87-1.5l1.7-2.9a3.42 3.42 0 0 0-2.17-3.82z"
+                />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl text-white mb-2">مالکیت فکری</h3>
+            <p class="text-white/60 text-sm leading-relaxed mb-4">
+              ثبت اختراع، برند، کپی‌رایت و نقض حق.
+            </p>
+            <a
+              href="#"
+              class="text-gold-300 text-sm flex items-center gap-1 hover:gap-2 transition-all"
+              >بیشتر
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 12H5M12 19l-7-7 7-7" /></svg
+            ></a>
+          </div>
+          <div
+            class="service-card glow-border p-7"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="icon-wrap w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center mb-5"
+            >
+              <svg
+                class="w-7 h-7 text-gold-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl text-white mb-2">حقوق کار</h3>
+            <p class="text-white/60 text-sm leading-relaxed mb-4">
+              قراردادهای کار، اخراج، بیمه و مزایا.
+            </p>
+            <a
+              href="#"
+              class="text-gold-300 text-sm flex items-center gap-1 hover:gap-2 transition-all"
+              >بیشتر
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 12H5M12 19l-7-7 7-7" /></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-28 bg-ink-800/30 relative overflow-hidden">
+      <div
+        class="absolute top-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="max-w-7xl mx-auto px-5 lg:px-10 grid lg:grid-cols-2 gap-14 items-center relative"
+      >
+        <div data-aos="fade-left" class="relative">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="space-y-4">
+              <img
+                src="https://image.qwenlm.ai/public_source/ae1c9f77-097e-4ede-a461-ac66b51fdf21/1681f130d-2031-4a14-84cc-23d6b551980c.png"
+                class="rounded-2xl w-full h-72 object-cover border border-gold-500/20"
+              />
+              <div class="glow-border p-6">
+                <div class="num-big text-5xl text-gold-grad">+۵۰</div>
+                <div class="text-xs text-white/60 mt-1">وکیل متخصص</div>
+              </div>
+            </div>
+            <div class="space-y-4 pt-10">
+              <div class="glow-border p-6">
+                <div class="num-big text-5xl text-gold-grad">۲۴/۷</div>
+                <div class="text-xs text-white/60 mt-1">پشتیبانی اضطراری</div>
+              </div>
+              <img
+                src="https://image.qwenlm.ai/public_source/ae1c9f77-097e-4ede-a461-ac66b51fdf21/1530999d9-c69c-40aa-ac7b-98df943bac47.png"
+                class="rounded-2xl w-full h-72 object-cover border border-gold-500/20"
+              />
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-right">
+          <div class="text-gold-300 text-xs tracking-[0.3em] mb-4">
+            درباره موسسه
+          </div>
+          <h2 class="font-display text-4xl md:text-5xl text-white mb-6">
+            تعهد به <span class="text-gold-grad">عدالت</span>، قدرت در تخصص
+          </h2>
+          <p class="text-white/70 leading-loose mb-6">
+            موسسه حقوقی پارس در سال ۱۳۸۰ با هدف ارائه خدمات حقوقی با بالاترین
+            استاندارد جهانی در تهران تاسیس شد. ما با تیمی متشکل از بیش از ۵۰
+            وکیل پایه یک دادگستری و مشاوران حقوقی، تاکنون افتخار همراهی با بیش
+            از ۲۴۰۰ پرونده را داشته‌ایم.
+          </p>
+          <p class="text-white/70 leading-loose mb-8">
+            فلسفه کاری ما بر پایه سه اصل بنیادین استوار است:
+            <span class="text-gold-300 font-semibold">رازداری مطلق</span>،
+            <span class="text-gold-300 font-semibold">تعهد به نتیجه</span> و
+            <span class="text-gold-300 font-semibold">شفافیت کامل</span> در
+            تمامی مراحل پرونده.
+          </p>
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start gap-4">
+              <div
+                class="w-10 h-10 rounded-lg bg-gold-500/15 flex-shrink-0 flex items-center justify-center"
+              >
+                <svg
+                  class="w-5 h-5 text-gold-300"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-white font-semibold mb-1">
+                  عضو رسمی کانون وکلای دادگستری
+                </div>
+                <div class="text-sm text-white/60">
+                  دارای پروانه‌های معتبر و رتبه‌بندی A+ از مراجع رسمی.
+                </div>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div
+                class="w-10 h-10 rounded-lg bg-gold-500/15 flex-shrink-0 flex items-center justify-center"
+              >
+                <svg
+                  class="w-5 h-5 text-gold-300"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-white font-semibold mb-1">
+                  همکاری با دفاتر بین‌المللی
+                </div>
+                <div class="text-sm text-white/60">
+                  شبکه همکاری با دفاتر حقوقی در لندن، دبی و استانبول.
+                </div>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div
+                class="w-10 h-10 rounded-lg bg-gold-500/15 flex-shrink-0 flex items-center justify-center"
+              >
+                <svg
+                  class="w-5 h-5 text-gold-300"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-white font-semibold mb-1">
+                  مشاوره محرمانه و فوری
+                </div>
+                <div class="text-sm text-white/60">
+                  پاسخگویی در کمتر از ۳۰ دقیقه در موارد اضطراری.
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            onclick="openModal()"
+            class="btn-gold text-ink-900 font-bold px-8 py-4 rounded-xl"
+          >
+            شروع همکاری
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASES -->
+    <section id="cases" class="py-28">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6"
+          data-aos="fade-up"
+        >
+          <div>
+            <div class="text-gold-300 text-xs tracking-[0.3em] mb-4">
+              پرونده‌های شاخص
+            </div>
+            <h2 class="font-display text-4xl md:text-5xl text-white">
+              نتایجی که <span class="text-gold-grad">تفاوت</span> می‌سازند
+            </h2>
+          </div>
+          <p class="text-white/60 max-w-md">
+            نگاهی به برخی از پرونده‌های موفق که با تلاش تیم حقوقی ما به نتیجه
+            مطلوب رسیده‌اند.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="case-card relative group rounded-2xl overflow-hidden cursor-pointer"
+            data-aos="fade-up"
+          >
+            <img
+              src="https://image.qwenlm.ai/public_source/ae1c9f77-097e-4ede-a461-ac66b51fdf21/1681f130d-2031-4a14-84cc-23d6b551980c.png"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/60 to-transparent"
+            ></div>
+            <div
+              class="absolute inset-0 bg-gold-500/0 overlay group-hover:bg-gold-500/10"
+            ></div>
+            <div class="absolute bottom-0 inset-x-0 p-6">
+              <div class="text-gold-300 text-xs tracking-widest mb-2">
+                حقوق تجارت
+              </div>
+              <h3 class="font-display text-2xl text-white mb-2">
+                ادغام دو شرکت بورسی
+              </h3>
+              <p class="text-white/70 text-sm mb-3">
+                پرونده ۱۸ ماهه با ارزش ۲۴۰ میلیارد تومان.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-gold-300 text-xs">✓ موفقیت کامل</span
+                ><span class="text-white/40 text-xs">۱۴۰۳</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="case-card relative group rounded-2xl overflow-hidden cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <img
+              src="https://image.qwenlm.ai/public_source/ae1c9f77-097e-4ede-a461-ac66b51fdf21/1530999d9-c69c-40aa-ac7b-98df943bac47.png"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/60 to-transparent"
+            ></div>
+            <div
+              class="absolute inset-0 bg-gold-500/0 overlay group-hover:bg-gold-500/10"
+            ></div>
+            <div class="absolute bottom-0 inset-x-0 p-6">
+              <div class="text-gold-300 text-xs tracking-widest mb-2">
+                داوری بین‌المللی
+              </div>
+              <h3 class="font-display text-2xl text-white mb-2">
+                اختلاف تجاری با طرف اروپایی
+              </h3>
+              <p class="text-white/70 text-sm mb-3">
+                داوری ICC پاریس — حکم به نفع موکل ایرانی.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-gold-300 text-xs">✓ پیروزی قاطع</span
+                ><span class="text-white/40 text-xs">۱۴۰۲</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="case-card relative group rounded-2xl overflow-hidden cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <img
+              src="https://image.qwenlm.ai/public_source/ae1c9f77-097e-4ede-a461-ac66b51fdf21/15e5c2b48-a43b-47f0-827f-a4c6c2164e56.png"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/60 to-transparent"
+            ></div>
+            <div
+              class="absolute inset-0 bg-gold-500/0 overlay group-hover:bg-gold-500/10"
+            ></div>
+            <div class="absolute bottom-0 inset-x-0 p-6">
+              <div class="text-gold-300 text-xs tracking-widest mb-2">
+                دعاوی ملکی
+              </div>
+              <h3 class="font-display text-2xl text-white mb-2">
+                پرونده پیچیده املاک منطقه ۱
+              </h3>
+              <p class="text-white/70 text-sm mb-3">
+                بازپس‌گیری ۱۲ ملک تجاری با اسناد جعلی.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-gold-300 text-xs">✓ موفقیت ۱۰۰٪</span
+                ><span class="text-white/40 text-xs">۱۴۰۲</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="case-card relative group rounded-2xl overflow-hidden cursor-pointer"
+            data-aos="fade-up"
+          >
+            <div
+              class="w-full h-80 bg-gradient-to-br from-ink-700 to-ink-900 flex items-center justify-center relative overflow-hidden"
+            >
+              <div class="absolute inset-0 grid-lines opacity-30"></div>
+              <div class="text-center relative">
+                <div class="num-big text-7xl text-gold-grad">۲۴۰۰+</div>
+                <div class="text-white/60 mt-3">پرونده موفق در ۲۳ سال</div>
+              </div>
+            </div>
+            <div class="absolute bottom-0 inset-x-0 p-6">
+              <h3 class="font-display text-2xl text-white mb-2">
+                افتخار ما، اعتماد شماست
+              </h3>
+              <div class="flex items-center gap-4 text-xs text-white/60">
+                <span>🏆 برتر ۵ سال متوالی</span><span>⭐ ۴.۹/۵</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="case-card relative group rounded-2xl overflow-hidden cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <img
+              src="https://image.qwenlm.ai/public_source/ae1c9f77-097e-4ede-a461-ac66b51fdf21/131909b6f-c2bf-494d-ac80-b129a8900a81.png"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/60 to-transparent"
+            ></div>
+            <div
+              class="absolute inset-0 bg-gold-500/0 overlay group-hover:bg-gold-500/10"
+            ></div>
+            <div class="absolute bottom-0 inset-x-0 p-6">
+              <div class="text-gold-300 text-xs tracking-widest mb-2">
+                حقوق کیفری
+              </div>
+              <h3 class="font-display text-2xl text-white mb-2">
+                دفاع در پرونده پیچیده مالی
+              </h3>
+              <p class="text-white/70 text-sm mb-3">
+                تبرئه کامل پس از ۸ ماه دادرسی.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-gold-300 text-xs">✓ تبرئه</span
+                ><span class="text-white/40 text-xs">۱۴۰۳</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="case-card relative group rounded-2xl overflow-hidden cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <img
+              src="https://image.qwenlm.ai/public_source/ae1c9f77-097e-4ede-a461-ac66b51fdf21/1530999d9-c69c-40aa-ac7b-98df943bac47.png"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/60 to-transparent"
+            ></div>
+            <div
+              class="absolute inset-0 bg-gold-500/0 overlay group-hover:bg-gold-500/10"
+            ></div>
+            <div class="absolute bottom-0 inset-x-0 p-6">
+              <div class="text-gold-300 text-xs tracking-widest mb-2">
+                مالکیت فکری
+              </div>
+              <h3 class="font-display text-2xl text-white mb-2">
+                نقض حق اختراع استارتاپ
+              </h3>
+              <p class="text-white/70 text-sm mb-3">
+                جبران خسارت ۸ میلیارد تومانی.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-gold-300 text-xs">✓ غرامت کامل</span
+                ><span class="text-white/40 text-xs">۱۴۰۳</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="py-28 bg-ink-800/30">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div class="text-center mb-14" data-aos="fade-up">
+          <div class="text-gold-300 text-xs tracking-[0.3em] mb-4">
+            تیم حقوقی
+          </div>
+          <h2 class="font-display text-4xl md:text-5xl text-white mb-4">
+            وکلای <span class="text-gold-grad">برگزیده</span>
+          </h2>
+          <span class="section-divider"></span>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="group" data-aos="fade-up">
+            <div class="relative overflow-hidden rounded-2xl mb-4">
+              <img
+                src="https://image.qwenlm.ai/public_source/ae1c9f77-097e-4ede-a461-ac66b51fdf21/131909b6f-c2bf-494d-ac80-b129a8900a81.png"
+                class="w-full h-80 object-cover group-hover:scale-105 transition duration-700"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-ink-900 via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-3 right-3 flex gap-2">
+                <a
+                  href="#"
+                  class="w-9 h-9 rounded-full bg-ink-900/70 flex items-center justify-center hover:bg-gold-500 transition"
+                  ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    /></svg
+                ></a>
+                <a
+                  href="#"
+                  class="w-9 h-9 rounded-full bg-ink-900/70 flex items-center justify-center hover:bg-gold-500 transition"
+                  ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                    /></svg
+                ></a>
+              </div>
+            </div>
+            <h3 class="font-display text-xl text-white">دکتر امیر پارسا</h3>
+            <div class="text-gold-300 text-sm mb-2">
+              مدیر موسسه | حقوق تجارت
+            </div>
+            <div class="text-white/50 text-xs">۲۳ سال سابقه وکالت</div>
+          </div>
+          <div class="group" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative overflow-hidden rounded-2xl mb-4">
+              <img
+                src="https://image.qwenlm.ai/public_source/ae1c9f77-097e-4ede-a461-ac66b51fdf21/131909b6f-c2bf-494d-ac80-b129a8900a81.png"
+                class="w-full h-80 object-cover group-hover:scale-105 transition duration-700"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-ink-900 via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-3 right-3 flex gap-2">
+                <a
+                  href="#"
+                  class="w-9 h-9 rounded-full bg-ink-900/70 flex items-center justify-center hover:bg-gold-500 transition"
+                  ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    /></svg
+                ></a>
+                <a
+                  href="#"
+                  class="w-9 h-9 rounded-full bg-ink-900/70 flex items-center justify-center hover:bg-gold-500 transition"
+                  ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                    /></svg
+                ></a>
+              </div>
+            </div>
+            <h3 class="font-display text-xl text-white">دکتر سارا احمدی</h3>
+            <div class="text-gold-300 text-sm mb-2">
+              وکیل ارشد | حقوق خانواده
+            </div>
+            <div class="text-white/50 text-xs">۱۸ سال سابقه وکالت</div>
+          </div>
+          <div class="group" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative overflow-hidden rounded-2xl mb-4">
+              <img
+                src="https://image.qwenlm.ai/public_source/ae1c9f77-097e-4ede-a461-ac66b51fdf21/131909b6f-c2bf-494d-ac80-b129a8900a81.png"
+                class="w-full h-80 object-cover group-hover:scale-105 transition duration-700"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-ink-900 via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-3 right-3 flex gap-2">
+                <a
+                  href="#"
+                  class="w-9 h-9 rounded-full bg-ink-900/70 flex items-center justify-center hover:bg-gold-500 transition"
+                  ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    /></svg
+                ></a>
+                <a
+                  href="#"
+                  class="w-9 h-9 rounded-full bg-ink-900/70 flex items-center justify-center hover:bg-gold-500 transition"
+                  ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                    /></svg
+                ></a>
+              </div>
+            </div>
+            <h3 class="font-display text-xl text-white">دکتر رضا موسوی</h3>
+            <div class="text-gold-300 text-sm mb-2">وکیل ارشد | حقوق کیفری</div>
+            <div class="text-white/50 text-xs">۱۵ سال سابقه وکالت</div>
+          </div>
+          <div class="group" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative overflow-hidden rounded-2xl mb-4">
+              <img
+                src="https://image.qwenlm.ai/public_source/ae1c9f77-097e-4ede-a461-ac66b51fdf21/131909b6f-c2bf-494d-ac80-b129a8900a81.png"
+                class="w-full h-80 object-cover group-hover:scale-105 transition duration-700"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-ink-900 via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-3 right-3 flex gap-2">
+                <a
+                  href="#"
+                  class="w-9 h-9 rounded-full bg-ink-900/70 flex items-center justify-center hover:bg-gold-500 transition"
+                  ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    /></svg
+                ></a>
+                <a
+                  href="#"
+                  class="w-9 h-9 rounded-full bg-ink-900/70 flex items-center justify-center hover:bg-gold-500 transition"
+                  ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                    /></svg
+                ></a>
+              </div>
+            </div>
+            <h3 class="font-display text-xl text-white">دکتر نیلوفر کریمی</h3>
+            <div class="text-gold-300 text-sm mb-2">داور بین‌المللی ICC</div>
+            <div class="text-white/50 text-xs">۱۲ سال سابقه وکالت</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="py-28">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div class="text-center mb-14" data-aos="fade-up">
+          <div class="text-gold-300 text-xs tracking-[0.3em] mb-4">
+            فرایند کار
+          </div>
+          <h2 class="font-display text-4xl md:text-5xl text-white mb-4">
+            چهار گام تا <span class="text-gold-grad">پیروزی</span>
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            class="relative p-6 rounded-2xl border border-white/10 hover:border-gold-500/40 transition"
+            data-aos="fade-up"
+          >
+            <div class="num-big text-6xl text-gold-grad opacity-30 mb-2">
+              ۰۱
+            </div>
+            <h3 class="font-display text-xl text-white mb-2">مشاوره اولیه</h3>
+            <p class="text-white/60 text-sm leading-relaxed">
+              بررسی دقیق پرونده شما در جلسه‌ای محرمانه و رایگان.
+            </p>
+          </div>
+          <div
+            class="relative p-6 rounded-2xl border border-white/10 hover:border-gold-500/40 transition"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="num-big text-6xl text-gold-grad opacity-30 mb-2">
+              ۰۲
+            </div>
+            <h3 class="font-display text-xl text-white mb-2">تحلیل حقوقی</h3>
+            <p class="text-white/60 text-sm leading-relaxed">
+              تهیه گزارش جامع از نقاط قوت و ضعف پرونده.
+            </p>
+          </div>
+          <div
+            class="relative p-6 rounded-2xl border border-white/10 hover:border-gold-500/40 transition"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="num-big text-6xl text-gold-grad opacity-30 mb-2">
+              ۰۳
+            </div>
+            <h3 class="font-display text-xl text-white mb-2">تدوین استراتژی</h3>
+            <p class="text-white/60 text-sm leading-relaxed">
+              طراحی نقشه راه تخصصی با تیم حقوقی.
+            </p>
+          </div>
+          <div
+            class="relative p-6 rounded-2xl border border-white/10 hover:border-gold-500/40 transition"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="num-big text-6xl text-gold-grad opacity-30 mb-2">
+              ۰۴
+            </div>
+            <h3 class="font-display text-xl text-white mb-2">اجرا و پیروزی</h3>
+            <p class="text-white/60 text-sm leading-relaxed">
+              پیگیری مستمر تا حصول نتیجه مطلوب.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-28 bg-ink-800/30 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div class="text-center mb-14" data-aos="fade-up">
+          <div class="text-gold-300 text-xs tracking-[0.3em] mb-4">
+            نظرات موکلین
+          </div>
+          <h2 class="font-display text-4xl md:text-5xl text-white mb-4">
+            اعتمادی که <span class="text-gold-grad">ساخته‌ایم</span>
+          </h2>
+        </div>
+        <div class="relative">
+          <div class="overflow-hidden">
+            <div class="testimonial-track flex" id="testimonialTrack">
+              <div class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-3">
+                <div class="glow-border p-8 h-full">
+                  <div class="flex gap-1 mb-4 text-gold-300">★★★★★</div>
+                  <p class="text-white/80 leading-relaxed mb-6">
+                    «تیم حقوقی پارس در پرونده پیچیده تجاری ما عملکردی فراتر از
+                    انتظار داشت. شفافیت و حرفه‌ای بودن این موسسه واقعاً قابل
+                    تحسین است.»
+                  </p>
+                  <div
+                    class="flex items-center gap-3 pt-4 border-t border-white/10"
+                  >
+                    <div
+                      class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-700 flex items-center justify-center text-ink-900 font-bold"
+                    >
+                      ع.م
+                    </div>
+                    <div>
+                      <div class="text-white font-semibold">علی محمدی</div>
+                      <div class="text-xs text-white/50">
+                        مدیرعامل شرکت سهامی عام
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-3">
+                <div class="glow-border p-8 h-full">
+                  <div class="flex gap-1 mb-4 text-gold-300">★★★★★</div>
+                  <p class="text-white/80 leading-relaxed mb-6">
+                    «در بحبوحه یک پرونده بین‌المللی پیچیده، دکتر پارسا و تیمشان
+                    با صبر و تخصص بی‌نظیر، ما را به پیروزی رساندند.»
+                  </p>
+                  <div
+                    class="flex items-center gap-3 pt-4 border-t border-white/10"
+                  >
+                    <div
+                      class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-700 flex items-center justify-center text-ink-900 font-bold"
+                    >
+                      ف.ر
+                    </div>
+                    <div>
+                      <div class="text-white font-semibold">فرزانه رحیمی</div>
+                      <div class="text-xs text-white/50">تاجر بین‌المللی</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-3">
+                <div class="glow-border p-8 h-full">
+                  <div class="flex gap-1 mb-4 text-gold-300">★★★★★</div>
+                  <p class="text-white/80 leading-relaxed mb-6">
+                    «رازداری و دقت در کار این موسسه بی‌نظیر است. پس از سال‌ها کش
+                    و قوس، بالاخره با کمکشان حقمان را گرفتیم.»
+                  </p>
+                  <div
+                    class="flex items-center gap-3 pt-4 border-t border-white/10"
+                  >
+                    <div
+                      class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-700 flex items-center justify-center text-ink-900 font-bold"
+                    >
+                      م.ح
+                    </div>
+                    <div>
+                      <div class="text-white font-semibold">محمد حسینی</div>
+                      <div class="text-xs text-white/50">کارآفرین</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-3">
+                <div class="glow-border p-8 h-full">
+                  <div class="flex gap-1 mb-4 text-gold-300">★★★★★</div>
+                  <p class="text-white/80 leading-relaxed mb-6">
+                    «بهترین تصمیمی که در آن دوران سخت گرفتم، انتخاب موسسه پارس
+                    بود. حمایت عاطفی و حقوقی‌شان فوق‌العاده بود.»
+                  </p>
+                  <div
+                    class="flex items-center gap-3 pt-4 border-t border-white/10"
+                  >
+                    <div
+                      class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-700 flex items-center justify-center text-ink-900 font-bold"
+                    >
+                      ز.ک
+                    </div>
+                    <div>
+                      <div class="text-white font-semibold">زهرا کاظمی</div>
+                      <div class="text-xs text-white/50">پزشک</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center gap-3 mt-8">
+            <button
+              onclick="slideTestimonial(-1)"
+              class="w-12 h-12 rounded-full border border-white/15 hover:border-gold-500 hover:bg-gold-500/10 transition flex items-center justify-center"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+            <button
+              onclick="slideTestimonial(1)"
+              class="w-12 h-12 rounded-full border border-white/15 hover:border-gold-500 hover:bg-gold-500/10 transition flex items-center justify-center"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-28">
+      <div class="max-w-4xl mx-auto px-5 lg:px-10">
+        <div class="text-center mb-14" data-aos="fade-up">
+          <div class="text-gold-300 text-xs tracking-[0.3em] mb-4">
+            سوالات متداول
+          </div>
+          <h2 class="font-display text-4xl md:text-5xl text-white mb-4">
+            پاسخ به <span class="text-gold-grad">دغدغه‌های شما</span>
+          </h2>
+        </div>
+        <div class="space-y-3">
+          <div
+            class="faq-item glow-border p-5 cursor-pointer"
+            data-aos="fade-up"
+            onclick="toggleFaq(this)"
+          >
+            <div class="flex items-center justify-between">
+              <h3 class="text-white font-semibold">
+                هزینه مشاوره اولیه چقدر است؟
+              </h3>
+              <div class="faq-toggle text-gold-300 text-2xl leading-none">
+                +
+              </div>
+            </div>
+            <div class="faq-answer text-white/70 text-sm leading-relaxed mt-3">
+              اولین جلسه مشاوره (۴۵ دقیقه) کاملاً رایگان و محرمانه است. پس از
+              بررسی پرونده، برآورد هزینه بر اساس نوع و پیچیدگی پرونده به صورت
+              شفاف ارائه می‌شود.
+            </div>
+          </div>
+          <div
+            class="faq-item glow-border p-5 cursor-pointer"
+            data-aos="fade-up"
+            onclick="toggleFaq(this)"
+          >
+            <div class="flex items-center justify-between">
+              <h3 class="text-white font-semibold">
+                آیا خدمات به زبان انگلیسی ارائه می‌شود؟
+              </h3>
+              <div class="faq-toggle text-gold-300 text-2xl leading-none">
+                +
+              </div>
+            </div>
+            <div class="faq-answer text-white/70 text-sm leading-relaxed mt-3">
+              بله. تیم ما شامل وکلای مسلط به زبان‌های انگلیسی، عربی، ترکی و
+              فرانسه است و پرونده‌های بین‌المللی را در دادگاه‌های داخلی و خارجی
+              و همچنین مراکز داوری بین‌المللی پیگیری می‌کند.
+            </div>
+          </div>
+          <div
+            class="faq-item glow-border p-5 cursor-pointer"
+            data-aos="fade-up"
+            onclick="toggleFaq(this)"
+          >
+            <div class="flex items-center justify-between">
+              <h3 class="text-white font-semibold">
+                محرمانگی اطلاعات چگونه تضمین می‌شود؟
+              </h3>
+              <div class="faq-toggle text-gold-300 text-2xl leading-none">
+                +
+              </div>
+            </div>
+            <div class="faq-answer text-white/70 text-sm leading-relaxed mt-3">
+              تمامی پرونده‌ها تحت قرارداد محرمانگی (NDA) رسمی مدیریت می‌شوند.
+              تیم ما مطابق با اصول اخلاق حرفه‌ای کانون وکلا ملزم به حفظ کامل
+              اسرار موکل است و سیستم‌های IT ما با بالاترین استانداردهای امنیتی
+              رمزنگاری شده‌اند.
+            </div>
+          </div>
+          <div
+            class="faq-item glow-border p-5 cursor-pointer"
+            data-aos="fade-up"
+            onclick="toggleFaq(this)"
+          >
+            <div class="flex items-center justify-between">
+              <h3 class="text-white font-semibold">
+                در صورت نیاز به وکیل اضطراری چه کنم؟
+              </h3>
+              <div class="faq-toggle text-gold-300 text-2xl leading-none">
+                +
+              </div>
+            </div>
+            <div class="faq-answer text-white/70 text-sm leading-relaxed mt-3">
+              خط اضطراری ۲۴ ساعته ما (۰۲۱-۹۹۹۹۹۹۹۹) همیشه فعال است. در موارد
+              حساس کیفری مانند بازداشت، وکیل کشیک ما ظرف ۳۰ دقیقه در محل حاضر
+              می‌شود.
+            </div>
+          </div>
+          <div
+            class="faq-item glow-border p-5 cursor-pointer"
+            data-aos="fade-up"
+            onclick="toggleFaq(this)"
+          >
+            <div class="flex items-center justify-between">
+              <h3 class="text-white font-semibold">
+                نحوه پرداخت حق‌الوکاله چگونه است؟
+              </h3>
+              <div class="faq-toggle text-gold-300 text-2xl leading-none">
+                +
+              </div>
+            </div>
+            <div class="faq-answer text-white/70 text-sm leading-relaxed mt-3">
+              سه مدل پرداخت داریم: حق‌الوکاله ثابت، درصد از نتیجه پرونده
+              (success fee) و ترکیبی. اقساط بلندمدت نیز برای پرونده‌های بزرگ
+              قابل ارائه است.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" class="py-28 bg-ink-800/30">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6"
+          data-aos="fade-up"
+        >
+          <div>
+            <div class="text-gold-300 text-xs tracking-[0.3em] mb-4">
+              بلاگ حقوقی
+            </div>
+            <h2 class="font-display text-4xl md:text-5xl text-white">
+              آخرین <span class="text-gold-grad">مقالات</span>
+            </h2>
+          </div>
+          <a
+            href="#"
+            class="text-gold-300 text-sm flex items-center gap-2 hover:gap-3 transition-all"
+            >همه مقالات
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M19 12H5M12 19l-7-7 7-7" /></svg
+          ></a>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article
+            class="group glow-border overflow-hidden cursor-pointer"
+            data-aos="fade-up"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="https://image.qwenlm.ai/public_source/ae1c9f77-097e-4ede-a461-ac66b51fdf21/1530999d9-c69c-40aa-ac7b-98df943bac47.png"
+                class="w-full h-52 object-cover group-hover:scale-105 transition duration-700"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 text-xs text-white/50 mb-3">
+                <span class="text-gold-300">حقوق تجارت</span><span>•</span
+                ><span>۲۲ تیر ۱۴۰۵</span>
+              </div>
+              <h3
+                class="font-display text-xl text-white mb-3 group-hover:text-gold-300 transition"
+              >
+                چالش‌های قراردادهای تجاری بین‌المللی در سال ۲۰۲۶
+              </h3>
+              <p class="text-white/60 text-sm leading-relaxed mb-4">
+                نگاهی به تغییرات اخیر قوانین تجارت بین‌الملل و تاثیر آن بر
+                قراردادهای ایرانی.
+              </p>
+              <a href="#" class="text-gold-300 text-sm flex items-center gap-1"
+                >ادامه مطلب
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19 12H5M12 19l-7-7 7-7" /></svg
+              ></a>
+            </div>
+          </article>
+          <article
+            class="group glow-border overflow-hidden cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="https://image.qwenlm.ai/public_source/ae1c9f77-097e-4ede-a461-ac66b51fdf21/15e5c2b48-a43b-47f0-827f-a4c6c2164e56.png"
+                class="w-full h-52 object-cover group-hover:scale-105 transition duration-700"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 text-xs text-white/50 mb-3">
+                <span class="text-gold-300">حقوق خانواده</span><span>•</span
+                ><span>۱۵ تیر ۱۴۰۵</span>
+              </div>
+              <h3
+                class="font-display text-xl text-white mb-3 group-hover:text-gold-300 transition"
+              >
+                راهنمای جامع حقوق حضانت در قانون حمایت خانواده
+              </h3>
+              <p class="text-white/60 text-sm leading-relaxed mb-4">
+                بررسی کامل شرایط، مراحل و حقوق والدین در پرونده‌های حضانت.
+              </p>
+              <a href="#" class="text-gold-300 text-sm flex items-center gap-1"
+                >ادامه مطلب
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19 12H5M12 19l-7-7 7-7" /></svg
+              ></a>
+            </div>
+          </article>
+          <article
+            class="group glow-border overflow-hidden cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="https://image.qwenlm.ai/public_source/ae1c9f77-097e-4ede-a461-ac66b51fdf21/1681f130d-2031-4a14-84cc-23d6b551980c.png"
+                class="w-full h-52 object-cover group-hover:scale-105 transition duration-700"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 text-xs text-white/50 mb-3">
+                <span class="text-gold-300">داوری</span><span>•</span
+                ><span>۸ تیر ۱۴۰۵</span>
+              </div>
+              <h3
+                class="font-display text-xl text-white mb-3 group-hover:text-gold-300 transition"
+              >
+                چرا داوری تجاری جایگزین دادگاه می‌شود؟
+              </h3>
+              <p class="text-white/60 text-sm leading-relaxed mb-4">
+                مزایا، معایب و مقایسه هزینه‌های داوری در برابر دادرسی قضایی.
+              </p>
+              <a href="#" class="text-gold-300 text-sm flex items-center gap-1"
+                >ادامه مطلب
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19 12H5M12 19l-7-7 7-7" /></svg
+              ></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 relative overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-l from-gold-600/20 via-ink-900 to-gold-800/20"
+      ></div>
+      <div class="absolute inset-0 grid-lines opacity-30"></div>
+      <div
+        class="relative max-w-5xl mx-auto px-5 lg:px-10 text-center"
+        data-aos="zoom-in"
+      >
+        <h2 class="font-display text-4xl md:text-6xl text-white mb-6">
+          پرونده‌ای در دست دارید؟
+        </h2>
+        <p class="text-white/70 text-lg mb-10 max-w-2xl mx-auto">
+          همین حالا مشاوره رایگان دریافت کنید. پاسخ در کمتر از ۳۰ دقیقه.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <button
+            onclick="openModal()"
+            class="btn-gold text-ink-900 font-bold px-10 py-4 rounded-xl text-lg"
+          >
+            شروع مشاوره رایگان
+          </button>
+          <a
+            href="tel:+982112345678"
+            class="px-10 py-4 rounded-xl border border-white/20 hover:border-gold-500 transition flex items-center gap-2"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              />
+            </svg>
+            تماس فوری
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-28 bg-ink-800/30">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div data-aos="fade-left">
+            <div class="text-gold-300 text-xs tracking-[0.3em] mb-4">
+              تماس با ما
+            </div>
+            <h2 class="font-display text-4xl md:text-5xl text-white mb-6">
+              با ما <span class="text-gold-grad">در ارتباط</span> باشید
+            </h2>
+            <p class="text-white/70 leading-relaxed mb-10">
+              برای دریافت مشاوره یا هرگونه پرسش حقوقی، از طریق فرم یا اطلاعات
+              زیر با ما در تماس باشید. تیم پشتیبانی ما ۲۴ ساعته پاسخگوی شماست.
+            </p>
+            <div class="space-y-5">
+              <div
+                class="flex items-start gap-4 p-5 rounded-xl bg-ink-900/60 border border-white/5"
+              >
+                <div
+                  class="w-12 h-12 rounded-lg bg-gold-500/15 flex items-center justify-center flex-shrink-0"
+                >
+                  <svg
+                    class="w-5 h-5 text-gold-300"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-white font-semibold mb-1">دفتر مرکزی</div>
+                  <div class="text-white/60 text-sm">
+                    تهران، میدان ونک، برج آسمان، طبقه ۱۸
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-start gap-4 p-5 rounded-xl bg-ink-900/60 border border-white/5"
+              >
+                <div
+                  class="w-12 h-12 rounded-lg bg-gold-500/15 flex items-center justify-center flex-shrink-0"
+                >
+                  <svg
+                    class="w-5 h-5 text-gold-300"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-white font-semibold mb-1">تلفن تماس</div>
+                  <div class="text-white/60 text-sm">
+                    ۰۲۱-۱۲۳۴۵۶۷۸ | ۰۲۱-۹۹۹۹۹۹۹۹ (اضطراری)
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-start gap-4 p-5 rounded-xl bg-ink-900/60 border border-white/5"
+              >
+                <div
+                  class="w-12 h-12 rounded-lg bg-gold-500/15 flex items-center justify-center flex-shrink-0"
+                >
+                  <svg
+                    class="w-5 h-5 text-gold-300"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-white font-semibold mb-1">ایمیل</div>
+                  <div class="text-white/60 text-sm">
+                    info@parslaw.ir | urgent@parslaw.ir
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-start gap-4 p-5 rounded-xl bg-ink-900/60 border border-white/5"
+              >
+                <div
+                  class="w-12 h-12 rounded-lg bg-gold-500/15 flex items-center justify-center flex-shrink-0"
+                >
+                  <svg
+                    class="w-5 h-5 text-gold-300"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-white font-semibold mb-1">ساعات کاری</div>
+                  <div class="text-white/60 text-sm">
+                    شنبه تا پنجشنبه: ۹ تا ۱۸ | پشتیبانی: ۲۴ ساعته
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-right">
+            <form class="glow-border p-8" onsubmit="submitForm(event)">
+              <h3 class="font-display text-2xl text-white mb-2">
+                فرم درخواست مشاوره
+              </h3>
+              <p class="text-white/60 text-sm mb-6">پاسخ در کمتر از ۳۰ دقیقه</p>
+              <div class="grid md:grid-cols-2 gap-4 mb-4">
+                <div>
+                  <label class="block text-xs text-white/60 mb-2"
+                    >نام و نام خانوادگی</label
+                  >
+                  <input
+                    type="text"
+                    required
+                    class="w-full bg-ink-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-gold-500 focus:outline-none transition"
+                  />
+                </div>
+                <div>
+                  <label class="block text-xs text-white/60 mb-2"
+                    >شماره تماس</label
+                  >
+                  <input
+                    type="tel"
+                    required
+                    class="w-full bg-ink-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-gold-500 focus:outline-none transition"
+                  />
+                </div>
+              </div>
+              <div class="mb-4">
+                <label class="block text-xs text-white/60 mb-2">ایمیل</label>
+                <input
+                  type="email"
+                  class="w-full bg-ink-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-gold-500 focus:outline-none transition"
+                />
+              </div>
+              <div class="mb-4">
+                <label class="block text-xs text-white/60 mb-2"
+                  >حوزه حقوقی</label
+                >
+                <select
+                  class="w-full bg-ink-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-gold-500 focus:outline-none transition"
+                >
+                  <option>حقوق تجارت</option>
+                  <option>دعاوی ملکی</option>
+                  <option>حقوق کیفری</option>
+                  <option>حقوق خانواده</option>
+                  <option>تجارت بین‌الملل</option>
+                  <option>سایر</option>
+                </select>
+              </div>
+              <div class="mb-5">
+                <label class="block text-xs text-white/60 mb-2"
+                  >شرح مختصر پرونده</label
+                >
+                <textarea
+                  rows="4"
+                  class="w-full bg-ink-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-gold-500 focus:outline-none transition resize-none"
+                ></textarea>
+              </div>
+              <label class="flex items-center gap-2 mb-5 cursor-pointer">
+                <input type="checkbox" class="w-4 h-4 accent-gold-500" />
+                <span class="text-xs text-white/60"
+                  >با <a href="#" class="text-gold-300">شرایط و مقررات</a> موسسه
+                  موافقم.</span
+                >
+              </label>
+              <button
+                type="submit"
+                class="btn-gold text-ink-900 font-bold w-full py-4 rounded-xl"
+              >
+                ارسال درخواست
+              </button>
+              <div
+                id="formStatus"
+                class="text-center text-sm mt-4 hidden text-gold-300"
+              >
+                ✓ درخواست شما با موفقیت ثبت شد. به‌زودی با شما تماس خواهیم گرفت.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-ink-900 border-t border-white/5 pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+          <div>
+            <div class="flex items-center gap-3 mb-5">
+              <div
+                class="w-11 h-11 rounded-lg flex items-center justify-center"
+                style="background: linear-gradient(135deg, #d89924, #9c5819)"
+              >
+                <svg
+                  class="w-6 h-6 text-ink-900"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                >
+                  <path d="M3 21h18M6 21V9l6-5 6 5v12M10 21v-6h4v6" />
+                </svg>
+              </div>
+              <div>
+                <div class="font-display text-xl text-gold-grad">PĀRS</div>
+                <div class="text-[11px] text-white/50 tracking-[0.3em]">
+                  LAW FIRM
+                </div>
+              </div>
+            </div>
+            <p class="text-white/60 text-sm leading-relaxed mb-5">
+              موسسه حقوقی پارس، ارائه‌دهنده خدمات حقوقی تخصصی در ایران و
+              بین‌المللی از سال ۱۳۸۰.
+            </p>
+            <div class="flex gap-3">
+              <a
+                href="#"
+                class="w-9 h-9 rounded-full bg-white/5 hover:bg-gold-500 transition flex items-center justify-center"
+                ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"
+                  /></svg
+              ></a>
+              <a
+                href="#"
+                class="w-9 h-9 rounded-full bg-white/5 hover:bg-gold-500 transition flex items-center justify-center"
+                ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"
+                  /></svg
+              ></a>
+              <a
+                href="#"
+                class="w-9 h-9 rounded-full bg-white/5 hover:bg-gold-500 transition flex items-center justify-center"
+                ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  /></svg
+              ></a>
+              <a
+                href="#"
+                class="w-9 h-9 rounded-full bg-white/5 hover:bg-gold-500 transition flex items-center justify-center"
+                ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                  /></svg
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-white font-semibold mb-5">خدمات حقوقی</h4>
+            <ul class="space-y-3 text-white/60 text-sm">
+              <li><a href="#" class="hover:text-gold-300">حقوق تجارت</a></li>
+              <li><a href="#" class="hover:text-gold-300">دعاوی ملکی</a></li>
+              <li><a href="#" class="hover:text-gold-300">حقوق کیفری</a></li>
+              <li><a href="#" class="hover:text-gold-300">حقوق خانواده</a></li>
+              <li>
+                <a href="#" class="hover:text-gold-300">داوری بین‌المللی</a>
+              </li>
+              <li><a href="#" class="hover:text-gold-300">مالکیت فکری</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-semibold mb-5">لینک‌های مفید</h4>
+            <ul class="space-y-3 text-white/60 text-sm">
+              <li><a href="#" class="hover:text-gold-300">درباره ما</a></li>
+              <li><a href="#" class="hover:text-gold-300">تیم وکلا</a></li>
+              <li>
+                <a href="#" class="hover:text-gold-300">پرونده‌های موفق</a>
+              </li>
+              <li><a href="#" class="hover:text-gold-300">بلاگ حقوقی</a></li>
+              <li><a href="#" class="hover:text-gold-300">سوالات متداول</a></li>
+              <li><a href="#" class="hover:text-gold-300">حریم خصوصی</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-semibold mb-5">خبرنامه حقوقی</h4>
+            <p class="text-white/60 text-sm mb-4">
+              دریافت جدیدترین مقالات و تحلیل‌های حقوقی.
+            </p>
+            <form
+              onsubmit="
+                event.preventDefault();
+                this.querySelector('input').value = '';
+                alert('عضویت شما ثبت شد!');
+              "
+              class="flex gap-2"
+            >
+              <input
+                type="email"
+                required
+                placeholder="ایمیل شما"
+                class="flex-1 bg-ink-800 border border-white/10 rounded-lg px-3 py-2.5 text-sm text-white focus:border-gold-500 focus:outline-none"
+              />
+              <button class="btn-gold text-ink-900 px-4 rounded-lg">
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                </svg>
+              </button>
+            </form>
+            <div class="mt-5 pt-5 border-t border-white/5">
+              <div class="flex items-center gap-2 text-xs text-white/50">
+                <svg
+                  class="w-4 h-4 text-gold-300"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <polyline points="20 6 9 17 4 12" /></svg
+                >عضو رسمی کانون وکلای دادگستری
+              </div>
+              <div class="flex items-center gap-2 text-xs text-white/50 mt-2">
+                <svg
+                  class="w-4 h-4 text-gold-300"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <polyline points="20 6 9 17 4 12" /></svg
+                >گواهینامه ISO 27001
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/50"
+        >
+          <div>© ۱۴۰۵ موسسه حقوقی پارس. تمامی حقوق محفوظ است.</div>
+          <div class="flex gap-5">
+            <a href="#" class="hover:text-gold-300">شرایط استفاده</a>
+            <a href="#" class="hover:text-gold-300">حریم خصوصی</a>
+            <a href="#" class="hover:text-gold-300">کوکی‌ها</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div
+      id="modal"
+      class="modal-overlay fixed inset-0 z-[200] bg-ink-900/80 backdrop-blur-sm flex items-center justify-center p-4"
+    >
+      <div
+        class="modal-box glow-border max-w-lg w-full p-8 max-h-[90vh] overflow-y-auto"
+      >
+        <div class="flex justify-between items-start mb-5">
+          <div>
+            <h3 class="font-display text-2xl text-white mb-1">
+              رزرو مشاوره رایگان
+            </h3>
+            <p class="text-white/60 text-sm">جلسه ۴۵ دقیقه‌ای با وکیل متخصص</p>
+          </div>
+          <button
+            onclick="closeModal()"
+            class="w-9 h-9 rounded-full bg-white/5 hover:bg-gold-500/20 flex items-center justify-center"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <form
+          onsubmit="
+            event.preventDefault();
+            closeModal();
+            alert('✓ درخواست مشاوره شما ثبت شد. به‌زودی با شما تماس می‌گیریم.');
+          "
+        >
+          <div class="space-y-3">
+            <input
+              required
+              type="text"
+              placeholder="نام و نام خانوادگی"
+              class="w-full bg-ink-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-gold-500 focus:outline-none"
+            />
+            <input
+              required
+              type="tel"
+              placeholder="شماره تماس"
+              class="w-full bg-ink-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-gold-500 focus:outline-none"
+            />
+            <input
+              type="email"
+              placeholder="ایمیل (اختیاری)"
+              class="w-full bg-ink-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-gold-500 focus:outline-none"
+            />
+            <select
+              class="w-full bg-ink-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-gold-500 focus:outline-none"
+            >
+              <option>حقوق تجارت</option>
+              <option>دعاوی ملکی</option>
+              <option>حقوق کیفری</option>
+              <option>حقوق خانواده</option>
+              <option>بین‌المللی</option>
+              <option>سایر</option>
+            </select>
+            <textarea
+              rows="3"
+              placeholder="شرح مختصر (اختیاری)"
+              class="w-full bg-ink-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-gold-500 focus:outline-none resize-none"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="btn-gold text-ink-900 font-bold w-full py-4 rounded-xl mt-5"
+          >
+            ثبت درخواست
+          </button>
+          <p class="text-center text-xs text-white/40 mt-3">
+            اطلاعات شما کاملاً محرمانه است.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <button
+      id="backTop"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      class="fixed bottom-6 left-6 z-40 w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-700 text-ink-900 flex items-center justify-center opacity-0 invisible transition shadow-lg"
+    >
+      <svg
+        class="w-5 h-5"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        viewBox="0 0 24 24"
+      >
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
+
+    <!-- WhatsApp floating -->
+    <a
+      href="#"
+      class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-lg hover:scale-110 transition"
+    >
+      <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+        />
+      </svg>
+    </a>
+
+    <!-- فراخوانی فایل JS جدا شده -->
+    <script src="script.js"></script>
+  </body>
+</html>
