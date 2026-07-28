@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ==================== AOS ====================
-// AOS.init({ duration: 900, once: true, offset: 80 });//
+AOS.init({ duration: 900, once: true, offset: 80 });
 
 // ==================== CUSTOM CURSOR ====================
 const cursor = document.getElementById("cursor");
