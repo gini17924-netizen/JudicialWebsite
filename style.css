@@ -1,0 +1,1211 @@
+/* ==================== LOCAL FONTS (Vazirmatn) ==================== */
+/* Replaces the jsdelivr CDN font-face stylesheet. Falls back to system
+   fonts if the files are missing or the format is unsupported. */
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("fonts/Vazirmatn-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("fonts/Vazirmatn-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("fonts/Vazirmatn-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==================== AOS FALLBACK ==================== */
+/* vendor/aos.css hides [data-aos] elements until its JS reveals them.
+   If the AOS script fails to load (no-aos) or JavaScript is disabled
+   entirely (no-js), force the content visible so nothing stays hidden. */
+html.no-js [data-aos],
+html.no-aos [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Horizontal overflow containment: `clip` is the modern choice, older
+     Safari/Firefox fall back to `hidden` via the cascade. */
+  overflow-x: hidden;
+  overflow-x: clip;
+  /* Firefox equivalent of the WebKit custom scrollbar below. */
+  scrollbar-color: #9c5819 #11141b;
+}
+
+body.light-mode {
+  scrollbar-color: #9c5819 #f8f9fa;
+}
+
+/* Fixed navbar clearance for anchor jumps. Navbar is h-16 (64px) on mobile
+   and lg:h-20 (80px) on desktop; the extra quarter-heading keeps the section
+   heading comfortably visible below the bar. */
+section[id] {
+  scroll-margin-top: 4.5rem;
+}
+
+@media (min-width: 1024px) {
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+}
+
+/* Horizontal AOS slide-ins (about columns, hero image column) sit at
+   translateX(±100px) until revealed. Off-screen that widened the whole
+   document (e.g. 396px scrollWidth on a 312px viewport). Containing them
+   at their own grid fixes the overflow at the source; overflow-y stays
+   visible because clip+visible is a valid pairing, so nothing scrolls
+   inside the grid and the slide animation is unchanged visually. */
+#home .grid.lg\:grid-cols-2,
+#about .grid.lg\:grid-cols-2,
+#contact .grid.lg\:grid-cols-2 {
+  overflow-x: clip;
+}
+
+body {
+  font-family: "Vazirmatn", Tahoma, "Segoe UI", Arial, sans-serif;
+  background: #0b0d12;
+  color: #e9ecef;
+  overflow-x: clip;
+  transition:
+    background 0.6s ease,
+    color 0.6s ease;
+}
+
+.font-display {
+  font-family: "Vazirmatn", Tahoma, "Segoe UI", Arial, sans-serif;
+  font-weight: 900;
+}
+
+/* ==================== LIGHT MODE ==================== */
+body.light-mode {
+  background: #fafafa;
+  color: #1a1d24;
+}
+
+body.light-mode .text-white {
+  color: #1a1d24;
+}
+body.light-mode .text-gray-300,
+body.light-mode .text-gray-400 {
+  color: #4b5563;
+}
+body.light-mode .text-gray-500 {
+  color: #64748b;
+}
+body.light-mode .bg-dark-card {
+  background: #ffffff;
+}
+body.light-mode .bg-dark {
+  background: #ffffff;
+}
+body.light-mode .border-white\/5,
+body.light-mode .border-white\/10 {
+  border-color: #e2e8f0;
+}
+
+body.light-mode .glow-border {
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(216, 153, 36, 0.1);
+}
+
+body.light-mode .glow-border::before {
+  background: linear-gradient(135deg, #d89924, transparent, #d89924);
+}
+
+body.light-mode .hero-bg {
+  background:
+    radial-gradient(
+      1200px 600px at 80% 10%,
+      rgba(216, 153, 36, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      800px 500px at 10% 90%,
+      rgba(156, 88, 25, 0.1),
+      transparent 60%
+    ),
+    linear-gradient(180deg, #fafafa 0%, #f8f9fa 100%);
+}
+
+body.light-mode .nav-blur {
+  background: rgba(250, 250, 250, 0.85);
+  border-bottom-color: #e2e8f0;
+}
+
+body.light-mode .text-gold {
+  color: #d89924;
+}
+body.light-mode .bg-gold\/10 {
+  background: rgba(216, 153, 36, 0.1);
+}
+body.light-mode .border-gold\/20,
+body.light-mode .border-gold\/30 {
+  border-color: rgba(216, 153, 36, 0.3);
+}
+
+body.light-mode .btn-gold {
+  background: linear-gradient(135deg, #d89924, #9c5819);
+  color: #ffffff;
+}
+
+body.light-mode input,
+body.light-mode textarea,
+body.light-mode select {
+  background: #f8f9fa;
+  border-color: #e2e8f0;
+  color: #1a1d24;
+}
+
+body.light-mode input::placeholder,
+body.light-mode textarea::placeholder {
+  color: #94a3b8;
+}
+
+body.light-mode .floating {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+body.light-mode .modal-box {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+body.light-mode .marquee {
+  background: rgba(250, 250, 250, 0.9);
+  border-top-color: #e2e8f0;
+}
+
+      body.light-mode .bg-dark-card\/50 {
+        background: #f8f9fa;
+      }
+
+      /* Marquee bar, hero floating card and case-card scrims keep their
+         translucency in light mode — otherwise dark washes sit under dark
+         text and kill contrast. Dark mode is untouched. */
+      body.light-mode .bg-dark\/80 {
+        background: rgba(250, 250, 250, 0.85);
+      }
+
+      body.light-mode .bg-dark-card\/95 {
+        background: rgba(255, 255, 255, 0.95);
+      }
+
+      body.light-mode .case-card-advanced .overlay {
+        background: linear-gradient(
+          to top,
+          rgba(248, 249, 250, 0.95),
+          rgba(248, 249, 250, 0.55),
+          transparent
+        );
+      }
+
+/* ==================== SMART SUN & MOON MORPHING ==================== */
+.theme-toggle-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  color: #d89924;
+}
+
+body.light-mode .theme-toggle-btn {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+      .theme-toggle-btn:hover {
+        transform: scale(1.05);
+        background: rgba(216, 153, 36, 0.1);
+      }
+
+      /* Mobile-menu variant: the w-full utility must win over the compact
+         fixed width so the button spans the menu row, with icon and label
+         centered. The desktop header toggle (no w-full class) is unaffected. */
+      .theme-toggle-btn.w-full {
+        width: 100%;
+        gap: 0.625rem;
+      }
+
+.theme-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+}
+
+      /* Sun body */
+      .sun-body {
+        /* SVG transforms default to the viewport origin (0,0) — the dark-mode
+           rotate(-45deg) would throw the disc off to the bottom-left corner.
+           fill-box + center pins the rotation to the disc itself. */
+        transform-box: fill-box;
+        transform-origin: center;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* Sun rays */
+      .sun-rays {
+        transform-origin: center;
+        transform-box: fill-box;
+      }
+
+      .ray {
+        transform-origin: center;
+        transform-box: fill-box;
+        transition: all 0.5s cubic-bezier(0.4, 0, 1, 1);
+      }
+
+/* Mask circle for moon cutout */
+.mask-circle {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(50px, -50px);
+}
+
+/* Light mode: Sun state */
+body.light-mode .sun-body {
+  transform: rotate(0deg);
+}
+
+body.light-mode .ray {
+  transform: scale(1) rotate(0deg);
+  opacity: 1;
+}
+
+body.light-mode .mask-circle {
+  transform: translate(50px, -50px);
+}
+
+      /* Dark mode: Moon state — the cutout circle moves to (15, 9), biting
+         the top-right of the sun body (12,12, r5) so a crescent forms.
+         The previous translate(10px, -10px) parked it at (28, -4), far
+         outside the sun, so the "moon" was just a solid disc. */
+      body:not(.light-mode) .sun-body {
+        transform: rotate(-45deg);
+      }
+
+      body:not(.light-mode) .ray {
+        transform: scale(0) rotate(45deg);
+        opacity: 0;
+      }
+
+      body:not(.light-mode) .mask-circle {
+        transform: translate(-3px, 3px);
+      }
+
+/* ==================== CIRCULAR REVEAL TRANSITION ==================== */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 9999;
+}
+
+::view-transition-new(root) {
+  animation: reveal-circle 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes reveal-circle {
+  from {
+    clip-path: circle(0% at var(--x, 50%) var(--y, 50%));
+  }
+  to {
+    clip-path: circle(var(--radius, 150%) at var(--x, 50%) var(--y, 50%));
+  }
+}
+
+/* Fallback for browsers without View Transitions */
+@supports not (view-transition-name: none) {
+  body {
+    transition:
+      background-color 0.6s ease,
+      color 0.6s ease;
+  }
+}
+
+/* ==================== MAGNETIC CONTAINER ==================== */
+.magnetic-container {
+  position: relative;
+}
+
+/* ==================== SERVICE CARD ADVANCED ==================== */
+.service-card-advanced {
+  position: relative;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Icon Morphing */
+.icon-morph-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-default,
+.icon-hover {
+  transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.icon-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+}
+
+.service-card-advanced:hover .icon-default {
+  transform: scale(0.5);
+  opacity: 0;
+}
+
+.service-card-advanced:hover .icon-hover {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.service-card-advanced:hover .icon-morph-wrap {
+  background: linear-gradient(135deg, #d89924, #9c5819);
+}
+
+body.light-mode .service-card-advanced:hover .icon-morph-wrap {
+  background: linear-gradient(135deg, #d89924, #9c5819);
+}
+
+.service-card-advanced:hover .icon-morph-wrap svg {
+  color: #0b0d12;
+}
+
+body.light-mode .service-card-advanced:hover .icon-morph-wrap svg {
+  color: #ffffff;
+}
+
+      /* Text Morphing: grid-stacked titles. The wrap auto-sizes to the
+         taller title (no fixed heights, nothing clips, fully responsive),
+         and each title translates by its OWN height, so the second title
+         lands exactly in the visible position of the first. */
+      .text-morph-wrap {
+        display: grid;
+        overflow: hidden;
+      }
+
+      .text-morph-wrap > h3 {
+        grid-area: 1 / 1;
+        /* Explicit stretch: even when one title wraps to more lines than the
+           other, BOTH boxes equal the wrap height — so translateY(±100%)
+           always moves a title exactly one full wrap height. The shorter
+           title's text sits at the same top position the taller one had, so
+           the replacement is exact: no partial visibility, no overlap. */
+        align-self: stretch;
+        margin: 0;
+        transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+      }
+
+      .text-morph-b {
+        transform: translateY(100%);
+      }
+
+      /* Slide only on devices with a real hover pointer — touch devices
+         never enter a stuck state that would hide the original title. */
+      @media (hover: hover) and (pointer: fine) {
+        .service-card-advanced:hover .text-morph-a,
+        .case-card-advanced:hover .text-morph-a,
+        .blog-card-advanced:hover .text-morph-a {
+          transform: translateY(-100%);
+        }
+
+        .service-card-advanced:hover .text-morph-b,
+        .case-card-advanced:hover .text-morph-b,
+        .blog-card-advanced:hover .text-morph-b {
+          transform: translateY(0);
+        }
+      }
+
+      /* Keyboard users: hovering is not required — focusing anything inside
+         the card (e.g. its link) triggers the same morph. */
+      .service-card-advanced:focus-within .text-morph-a,
+      .case-card-advanced:focus-within .text-morph-a,
+      .blog-card-advanced:focus-within .text-morph-a {
+        transform: translateY(-100%);
+      }
+
+      .service-card-advanced:focus-within .text-morph-b,
+      .case-card-advanced:focus-within .text-morph-b,
+      .blog-card-advanced:focus-within .text-morph-b {
+        transform: translateY(0);
+      }
+
+/* Ripple Effect */
+.service-card-advanced .ripple,
+.case-card-advanced .ripple,
+.blog-card-advanced .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(216, 153, 36, 0.35);
+  transform: scale(0);
+  animation: ripple-anim 0.6s linear;
+  pointer-events: none;
+  z-index: 100;
+}
+
+body.light-mode .service-card-advanced .ripple,
+body.light-mode .case-card-advanced .ripple,
+body.light-mode .blog-card-advanced .ripple {
+  background: rgba(216, 153, 36, 0.25);
+}
+
+@keyframes ripple-anim {
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* ==================== CASE CARD ADVANCED ==================== */
+.case-card-advanced {
+  position: relative;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.case-card-advanced img {
+  transition: transform 0.8s ease;
+}
+
+.case-card-advanced:hover img {
+  transform: scale(1.08);
+}
+
+.case-card-advanced .overlay {
+  transition: opacity 0.5s;
+}
+
+.case-card-advanced:hover .overlay {
+  opacity: 1;
+}
+
+/* ==================== BLOG CARD ADVANCED ==================== */
+.blog-card-advanced {
+  position: relative;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.blog-card-advanced img {
+  transition: transform 0.8s ease;
+}
+
+.blog-card-advanced:hover img {
+  transform: scale(1.08);
+}
+
+/* ==================== ORIGINAL STYLES ==================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #11141b;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#d89924, #9c5819);
+  border-radius: 10px;
+}
+
+body.light-mode ::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+body.light-mode ::-webkit-scrollbar-thumb {
+  background: linear-gradient(#d89924, #9c5819);
+}
+
+.noise::before {
+  content: " ";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  z-index: 1;
+  mix-blend-mode: overlay;
+}
+
+body.light-mode .noise::before {
+  opacity: 0.02;
+}
+
+.text-gold-grad {
+  background: linear-gradient(
+    135deg,
+    #f2dc99 0%,
+    #d89924 50%,
+    #9c5819 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.light-mode .text-gold-grad {
+  background: linear-gradient(
+    135deg,
+    #f2dc99 0%,
+    #d89924 50%,
+    #9c5819 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-border {
+  position: relative;
+  background: #11141b;
+  border-radius: 1rem;
+}
+
+.glow-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, #d89924, transparent, #d89924);
+  pointer-events: none;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 0;
+}
+
+.glow-border > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-bg {
+  background:
+    radial-gradient(
+      1200px 600px at 80% 10%,
+      rgba(216, 153, 36, 0.18),
+      transparent 60%
+    ),
+    radial-gradient(
+      800px 500px at 10% 90%,
+      rgba(156, 88, 25, 0.18),
+      transparent 60%
+    ),
+    linear-gradient(180deg, #0b0d12 0%, #11141b 100%);
+}
+
+      /* RTL ticker: the strip is laid out from the right edge and overflows
+         to the left, so it must travel RIGHTWARD. It holds 4 identical sets;
+         shifting by exactly one set (25% of the strip) per loop keeps the
+         container covered the whole time — no blank gap, no jump. */
+      /* RTL ticker: the strip is laid out from the right edge and overflows
+         to the left, so it must travel RIGHTWARD. The inter-set spacing lives
+         ON each set (padding-left), making every repeated unit exactly
+         setWidth + gap wide. The strip is 4 identical units, so shifting by
+         25% of the strip equals exactly one unit per loop — mathematically
+         seamless, no jump, no blank gap. */
+      .marquee {
+        display: flex;
+        width: max-content;
+        animation: marquee 30s linear infinite;
+        white-space: nowrap;
+      }
+
+      .marquee-set {
+        display: flex;
+        gap: 3rem;
+        padding-left: 3rem;
+        flex-shrink: 0;
+      }
+
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(25%);
+        }
+      }
+
+      .cursor-blink {
+        display: inline-block;
+        width: 3px;
+        background: #d89924;
+        animation: blink 1s step-end infinite;
+        margin-right: 2px;
+      }
+
+      /* Hero typing: grid stacks an invisible sizer (longest phrase + cursor)
+         and the live line in the same cell. The wrap's height is therefore
+         fixed to the worst case at every breakpoint and through font loading —
+         typing, deleting and wrapping can never move the layout. */
+      .typed-wrap {
+        display: grid;
+      }
+
+      .typed-wrap > span {
+        grid-area: 1 / 1;
+        min-width: 0;
+      }
+
+      .typed-sizer {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+body.light-mode .cursor-blink {
+  background: #d89924;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+      /* Custom cursor: JS writes --cursor-x/--cursor-y (top-left anchored,
+         matching clientX/clientY) and hover only flips --cursor-scale, so the
+         pointer translation is never overwritten by the hover effect.
+         Transform has no transition — it is updated per mousemove, keeping
+         tracking instant without lag. */
+      .custom-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 36px;
+        height: 36px;
+        border: 1.5px solid #d89924;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(var(--cursor-x, -100px), var(--cursor-y, -100px))
+          scale(var(--cursor-scale, 1));
+        transition: background 0.2s;
+        mix-blend-mode: difference;
+      }
+
+      body.light-mode .custom-cursor {
+        border-color: #d89924;
+      }
+
+      .custom-cursor.hover {
+        --cursor-scale: 1.6;
+        background: rgba(216, 153, 36, 0.15);
+      }
+
+      body.light-mode .custom-cursor.hover {
+        background: rgba(216, 153, 36, 0.15);
+      }
+
+      /* Hidden on touch devices and for reduced-motion users. */
+      @media (hover: none) {
+        .custom-cursor {
+          display: none;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .custom-cursor {
+          display: none;
+        }
+      }
+
+      .num-big {
+        font-family: "Vazirmatn", Tahoma, "Segoe UI", Arial, sans-serif;
+        font-weight: 900;
+      }
+
+      /* Graceful image fallback: a broken/slow image reveals a quiet gold
+         tint instead of a white hole; card media boxes keep their size. */
+      img {
+        background-color: rgba(216, 153, 36, 0.06);
+      }
+
+      /* FAQ accordion: grid-template-rows 0fr -> 1fr animates to the answer's
+         real height, so long answers are never clipped (max-height guesses
+         would cut them off). Keyboard: the toggle is a native <button>. */
+      .faq-item .faq-answer {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.4s ease;
+      }
+
+      .faq-answer > div {
+        overflow: hidden;
+        min-height: 0;
+      }
+
+      .faq-item.open .faq-answer {
+        grid-template-rows: 1fr;
+      }
+      .faq-item.open .faq-toggle {
+        transform: rotate(45deg);
+      }
+
+.faq-toggle {
+  transition: transform 0.4s;
+}
+
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #0b0d12;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    opacity 0.6s,
+    visibility 0.6s;
+}
+
+      body.light-mode #preloader {
+        background: #fafafa;
+      }
+
+      /* No-JS resilience: without script.js nothing ever adds .hide, so the
+         preloader must not exist at all when JavaScript is disabled. */
+      html.no-js #preloader {
+        display: none;
+      }
+
+      #preloader.hide {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+.loader-logo {
+  width: 90px;
+  height: 90px;
+  border: 2px solid rgba(216, 153, 36, 0.2);
+  border-top-color: #d89924;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+body.light-mode .loader-logo {
+  border-color: rgba(216, 153, 36, 0.2);
+  border-top-color: #d89924;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+      /* Back to top: visibility:hidden (not just opacity) keeps the button
+         out of the tab order and the accessibility tree while hidden. */
+      #backTop {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      #backTop.is-visible {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      #scroll-progress {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 3px;
+        width: 100%;
+        background: linear-gradient(90deg, #d89924, #9c5819);
+        z-index: 100;
+        /* transform-based fill (grows from the right edge, same as before)
+           — compositor-only, no layout work per scroll event. */
+        transform: scaleX(0);
+        transform-origin: right;
+      }
+
+body.light-mode #scroll-progress {
+  background: linear-gradient(90deg, #d89924, #9c5819);
+}
+
+.fancy-link {
+  position: relative;
+}
+
+.fancy-link::after {
+  content: " ";
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #d89924;
+  transition: width 0.4s;
+}
+
+body.light-mode .fancy-link::after {
+  background: #d89924;
+}
+
+.fancy-link:hover::after {
+  width: 100%;
+}
+
+.modal-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-overlay.active .modal-box {
+  transform: translateY(0);
+}
+
+.modal-box {
+  transform: translateY(40px);
+  transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #e4b23a, #9c5819);
+  position: relative;
+  overflow: hidden;
+}
+
+      .btn-gold::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          transparent,
+          rgba(255, 255, 255, 0.4),
+          transparent
+        );
+        /* Parked just off the right edge; hover sweeps it across using a
+           compositor-only transform instead of animating `right` (layout). */
+        transform: translateX(105%);
+        transition: transform 0.7s;
+        pointer-events: none;
+      }
+
+      .btn-gold:hover::after {
+        transform: translateX(-320%);
+      }
+
+.grid-lines {
+  background-image:
+    linear-gradient(
+      to left,
+      rgba(216, 153, 36, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to top, rgba(216, 153, 36, 0.06) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+body.light-mode .grid-lines {
+  background-image:
+    linear-gradient(
+      to left,
+      rgba(216, 153, 36, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to top, rgba(216, 153, 36, 0.04) 1px, transparent 1px);
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+      .nav-blur {
+        -webkit-backdrop-filter: blur(14px); /* Safari */
+        backdrop-filter: blur(14px);
+        background: rgba(11, 13, 18, 0.75);
+      }
+
+      /* Browsers without backdrop-filter (older Safari/Firefox): raise the
+         background opacity instead so text contrast never depends on blur. */
+      @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+        .nav-blur {
+          background: rgba(11, 13, 18, 0.97);
+        }
+        body.light-mode .nav-blur {
+          background: rgba(250, 250, 250, 0.97);
+        }
+        .bg-dark\/80 {
+          background: rgba(11, 13, 18, 0.97);
+        }
+        body.light-mode .bg-dark\/80 {
+          background: rgba(250, 250, 250, 0.97);
+        }
+        .bg-dark-card\/95 {
+          background: rgba(17, 20, 27, 0.99);
+        }
+        body.light-mode .bg-dark-card\/95 {
+          background: rgba(255, 255, 255, 0.99);
+        }
+        .modal-overlay {
+          background: rgba(0, 0, 0, 0.88);
+        }
+      }
+
+      /* Scrolled navbar: class toggled by script.js — per-theme variants so
+         no inline color ever fights the active theme. */
+      #navbar.is-scrolled {
+        border-bottom-color: rgba(216, 153, 36, 0.1);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      body.light-mode #navbar.is-scrolled {
+        border-bottom-color: rgba(216, 153, 36, 0.1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #d89924, transparent);
+  display: inline-block;
+}
+
+body.light-mode .section-divider {
+  background: linear-gradient(90deg, #d89924, transparent);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 380px) {
+  .num-big {
+    font-size: 1.5rem;
+  }
+  .font-display {
+    font-size: inherit;
+  }
+  h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.3 !important;
+  }
+  .marquee {
+    gap: 1.5rem;
+    font-size: 0.65rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-bg {
+    min-height: auto;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+}
+
+      @media (max-width: 768px) {
+        /* Touch targets: real form controls and buttons always get 44px.
+           Links only when they are styled as tappable chips/buttons (they
+           carry horizontal padding classes); plain inline and footer text
+           links are left at natural height so badges and inline links do
+           not get distorted. */
+        button,
+        input,
+        select,
+        textarea {
+          min-height: 44px;
+        }
+        a[class*="px-"] {
+          min-height: 44px;
+        }
+        .faq-item button {
+          min-height: 56px;
+        }
+  body {
+    max-width: 100vw;
+  }
+        /* Images: never exceed the viewport width. Fixed-height card media
+           (object-cover) keeps its fill — the blanket height:auto is gone
+           because the UA default is already auto for plain images. */
+        img {
+          max-width: 100%;
+        }
+        .case-card-advanced img,
+        .blog-card-advanced img {
+          height: 100%;
+        }
+        /* Broken or slow-loading images: the fixed-height media boxes keep
+           their size and show a quiet placeholder instead of collapsing. */
+        .case-card-advanced > div:first-child,
+        .blog-card-advanced > div:first-child {
+          background-color: #11141b;
+        }
+  .modal-box {
+    margin: 1rem;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .floating {
+    animation: none;
+  }
+
+  /* Disable advanced effects on mobile */
+  .service-card-advanced,
+  .case-card-advanced,
+  .blog-card-advanced {
+    transform: none !important;
+  }
+}
+
+      /* Keep the footer's last line clear of the floating back-to-top
+         button on small screens. !important intentionally beats the pb-6
+         utility class (equal job, larger scope). */
+      @media (max-width: 768px) {
+        footer {
+          padding-bottom: 5rem !important;
+        }
+      }
+
+      /* Mobile/tablet hero (320-1023px): column flex distribution — the
+         content wrapper grows (flex: 1 0 auto) and centers its block in the
+         free space, while the marquee stays in normal flow pinned to the
+         bottom edge of the section. Result: no overlap, and no dead blank
+         band between content and marquee even when min-height: 100vh leaves
+         free room (e.g. landscape phones). Desktop (>=1024px) keeps the
+         absolute bottom bar. */
+      @media (max-width: 1023px) {
+        #home.hero-bg {
+          display: flex;
+          flex-direction: column;
+          padding-top: 5rem;
+          padding-bottom: 0;
+        }
+        #home .hero-content {
+          flex: 1 0 auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-bottom: 3rem;
+        }
+        #home .marquee-bar {
+          position: static;
+          flex-shrink: 0;
+        }
+      }
+
+      @media (min-width: 1280px) {
+  .max-w-7xl {
+    max-width: 80rem;
+  }
+}
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+        /* Text morph: keep the primary title visible, alternate hidden. */
+        .text-morph-a {
+          transform: none !important;
+        }
+        .text-morph-b {
+          transform: translateY(100%) !important;
+        }
+        /* Ticker: freeze in place instead of animating. */
+        .marquee {
+          animation: none !important;
+        }
+        html {
+          scroll-behavior: auto;
+        }
+  .service-card-advanced,
+  .case-card-advanced,
+  .blog-card-advanced {
+    transform: none !important;
+  }
+  .service-card-advanced .ripple,
+  .case-card-advanced .ripple,
+  .blog-card-advanced .ripple {
+    display: none !important;
+  }
+}
+
+::selection {
+  background: rgba(216, 153, 36, 0.3);
+  color: #fff;
+}
+
+body.light-mode ::selection {
+  background: rgba(216, 153, 36, 0.3);
+  color: #1a1d24;
+}
+
+*:focus-visible {
+  outline: 2px solid #d89924;
+  outline-offset: 2px;
+}
+
+body.light-mode *:focus-visible {
+  outline-color: #d89924;
+}
+
+@media print {
+  .nav-blur,
+  .custom-cursor,
+  #preloader,
+  #scroll-progress,
+  #backTop,
+  .modal-overlay {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
+}
